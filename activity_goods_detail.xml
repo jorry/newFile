@@ -1,0 +1,190 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <include layout="@layout/pubic_title_bar"></include>
+
+    <include layout="@layout/line_padding"></include>
+
+    <ScrollView
+        style="@style/parent_MM"
+        android:layout_weight="1">
+
+        <LinearLayout
+            style="@style/parent_MM"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mGoodsDetailImg"
+                style="@style/parent_ww"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo"></ImageView>
+
+            <include layout="@layout/line"></include>
+
+            <RelativeLayout
+                style="@style/parent_MM"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="17dp"
+                android:id="@+id/mGoodsDetailTopRl">
+
+                <TextView
+                    android:id="@+id/mGoodsDetailTitleTv"
+                    style="@style/detail_tv"
+
+                    android:text="title"
+                    android:textColor="@color/app_black"></TextView>
+
+                <TextView
+                    android:id="@+id/mGoodsDetailSubTitleTv"
+                    style="@style/detail_tv"
+                    android:layout_below="@+id/mGoodsDetailTitleTv"
+                    android:text="subTitle"></TextView>
+
+                <TextView
+                    android:id="@+id/mGoodsDetailPrice"
+                    style="@style/detail_sub_title"
+                    android:layout_below="@+id/mGoodsDetailSubTitleTv"
+                    android:layout_marginTop="7dp"
+                    android:text="标准价："
+                    android:textColor="@color/them"></TextView>
+
+                <TextView
+                    android:id="@+id/mGoodsDetailPriceTv"
+                    style="@style/detail_sub_title"
+                    android:layout_alignTop="@+id/mGoodsDetailPrice"
+                    android:layout_toRightOf="@+id/mGoodsDetailPrice"
+                    android:text="标准价："
+                    android:textColor="@color/them"></TextView>
+
+                <TextView
+                    android:id="@+id/mGoodsDetailVipPrice"
+                    style="@style/detail_sub_title"
+                    android:layout_below="@+id/mGoodsDetailPrice"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="3dp"
+                    android:text="会员价："
+                    android:textColor="@color/them"></TextView>
+
+                <TextView
+                    android:id="@+id/mGoodsDetailVipPriceTv"
+                    style="@style/detail_sub_title"
+                    android:layout_alignLeft="@+id/mGoodsDetailPriceTv"
+                    android:layout_alignTop="@+id/mGoodsDetailVipPrice"
+                    android:layout_below="@+id/mGoodsDetailPrice"
+                    android:layout_toRightOf="@+id/mGoodsDetailVipPrice"
+                    android:text="$123"
+                    android:textColor="@color/them"></TextView>
+
+                <ImageView
+                    style="@style/parent_ww"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/arrow"></ImageView>
+            </RelativeLayout>
+
+            <include layout="@layout/line"></include>
+
+            <TextView
+                style="@style/detail_tv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="@dimen/view_padding_left"
+                android:text="配送方式"
+                android:textColor="@color/app_black"></TextView>
+
+            <TextView
+                style="@style/detail_sub_title"
+                android:layout_marginBottom="@dimen/view_padding_left"
+                android:layout_marginLeft="6dp"
+                android:text="顺丰快递：（￥12-18）"
+                android:textColor="#c9c9c9"
+                android:id="@+id/mGoodsDetailEMSTv"></TextView>
+
+            <include layout="@layout/line"></include>
+
+            <TextView
+                style="@style/detail_tv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="@dimen/view_padding_left"
+                android:text="退货政策"
+                android:textColor="@color/app_black"></TextView>
+
+            <TextView
+                style="@style/detail_sub_title"
+                android:layout_marginBottom="@dimen/view_padding_left"
+                android:layout_marginLeft="6dp"
+                android:text="运输途中商品破坏可以退换"
+                android:textColor="#c9c9c9"></TextView>
+
+            <include layout="@layout/line"></include>
+
+            <RelativeLayout
+                android:id="@+id/mGoodsDetailPingjiaRl"
+                style="@style/parent_Mw"
+                android:layout_marginBottom="@dimen/view_padding_left"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="@dimen/view_padding_left">
+
+                <TextView
+                    style="@style/detail_tv"
+                    android:id="@+id/mGoodsDetailPingjia"
+
+                    android:text="商品评价"
+                    android:textColor="@color/app_black"></TextView>
+
+                <TextView
+                    style="@style/detail_sub_title"
+                    android:layout_below="@+id/mGoodsDetailPingjia"
+                    android:text="已有9条评价"
+                    android:textColor="#c9c9c9"
+                    ></TextView>
+
+                <ImageView
+                    style="@style/parent_ww"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/arrow"></ImageView>
+            </RelativeLayout>
+
+
+            <include layout="@layout/line"></include>
+
+            <TextView
+                style="@style/detail_tv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="@dimen/view_padding_left"
+                android:text="猜你喜欢"
+                android:textColor="@color/app_black"></TextView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        style="@style/parent_Mw" android:id="@+id/mGoodsDetailButtomLl"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mGoodsDetailShareBt"
+            style="@style/parent_ww"
+            android:background="@drawable/ic_goods_share"></Button>
+
+        <Button
+            android:id="@+id/mGoodsDetailAddCardBt"
+            style="@style/parent_ww"
+            android:layout_weight="1"
+            android:background="@drawable/ic_goods_addcard"></Button>
+
+        <Button
+            android:id="@+id/mGoodsDetailBuyBt"
+            style="@style/parent_ww"
+            android:layout_weight="1"
+            android:background="@drawable/ic_goods_buy"></Button>
+    </LinearLayout>
+</LinearLayout>
